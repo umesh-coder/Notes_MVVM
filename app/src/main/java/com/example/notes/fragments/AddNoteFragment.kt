@@ -50,6 +50,8 @@ class AddNoteFragment : Fragment(R.layout.fragment_add_note),MenuProvider {
 
         notesViewModel = (activity as MainActivity).noteViewModel
 
+        (activity as MainActivity).supportActionBar?.title="Add Note"
+
         addNoteView = view
 
     }

@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
@@ -33,10 +34,12 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note),MenuProvider {
     private val args: EditNoteFragmentArgs by navArgs()
 
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         editNoteBinding = FragmentEditNoteBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -44,11 +47,16 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note),MenuProvider {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
         notesViewModel = (activity as MainActivity).noteViewModel
         currentNote = args.note!!
+
+        (activity as MainActivity).supportActionBar?.title="Edit Note"
+
+
 
         binding.editNoteTitle.setText(currentNote.noteTitle)
         binding.editNoteDesc.setText(currentNote.noteDescription)
