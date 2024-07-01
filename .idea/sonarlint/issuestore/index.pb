@@ -37,3 +37,13 @@ n
 >app/src/main/java/com/example/notes/viewmodel/NoteViewModel.kt,5\9\5908a29bb54c3939b818eb482182941e95ce6a05
 u
 Eapp/src/main/java/com/example/notes/viewmodel/NoteViewModelFactory.kt,3\d\3d8765dbfe472fb7924f46d514e03cad091c0eb3
+h
+8app/src/test/java/com/example/notes/NoteViewModelTest.kt,1\f\1ffd68ab1cdf345ce3cb72af455005dde06cf9c7
+f
+6app/src/test/java/com/example/notes/ExampleUnitTest.kt,b\9\b945beade31565f7f77acabca6edbc904a2f1c65
+i
+9app/src/test/java/com/example/notes/NoteRepositoryTest.kt,2\b\2b0047c1e56984be7571a4ff0b4b5218e8164a56
+_
+/app/src/test/java/com/example/notes/NoteTest.kt,f\9\f993c887ccbaef534ddeecbb5165d354265293db
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e

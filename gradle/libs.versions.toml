@@ -1,5 +1,5 @@
 [versions]
-agp = "8.4.1"
+agp = "8.4.2"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -17,6 +17,10 @@ navigationDynamicFeaturesFragment = "2.7.7"
 androidxNavigationSafeargsGradlePlugin = "2.7.7"
 comGoogleDevtoolsKspGradlePlugin = "2.0.0-1.0.21"
 roomCompiler = "2.7.0-alpha02"
+coreKtxVersion = "1.6.1"
+junitKtx = "1.2.1"
+fragmentTesting = "1.8.1"
+core = "1.44.0"
 
 
 
@@ -38,6 +42,10 @@ androidx-androidx-navigation-safeargs-gradle-plugin = { group = "androidx.naviga
 com-google-devtools-ksp-gradle-plugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "comGoogleDevtoolsKspGradlePlugin" }
 androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomCompiler" }
 room-compiler = { module = "androidx.room:room-compiler" }
+core-ktx = { group = "androidx.test", name = "core-ktx", version.ref = "coreKtxVersion" }
+androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
+androidx-fragment-testing = { group = "androidx.fragment", name = "fragment-testing", version.ref = "fragmentTesting" }
+core = { group = "com.google.ar", name = "core", version.ref = "core" }
 
 
 [plugins]

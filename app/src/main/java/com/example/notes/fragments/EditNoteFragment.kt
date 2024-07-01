@@ -23,7 +23,7 @@ import com.example.notes.model.Note
 import com.example.notes.viewmodel.NoteViewModel
 
 
-class EditNoteFragment : Fragment(R.layout.fragment_edit_note),MenuProvider {
+class EditNoteFragment : Fragment(R.layout.fragment_edit_note), MenuProvider {
 
     private var editNoteBinding: FragmentEditNoteBinding? = null
     private val binding get() = editNoteBinding!!
@@ -34,11 +34,10 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note),MenuProvider {
     private val args: EditNoteFragmentArgs by navArgs()
 
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         editNoteBinding = FragmentEditNoteBinding.inflate(inflater, container, false)
         return binding.root
@@ -47,16 +46,13 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note),MenuProvider {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
         notesViewModel = (activity as MainActivity).noteViewModel
         currentNote = args.note!!
 
-        (activity as MainActivity).supportActionBar?.title="Edit Note"
-
-
+        (activity as MainActivity).supportActionBar?.title = "Edit Note"
 
         binding.editNoteTitle.setText(currentNote.noteTitle)
         binding.editNoteDesc.setText(currentNote.noteDescription)
@@ -104,11 +100,12 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note),MenuProvider {
     }
 
     override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-        return when(menuItem.itemId) {
+        return when (menuItem.itemId) {
             R.id.deleteMenu -> {
                 deleteNote()
                 true
             }
+
             else -> false
         }
     }
